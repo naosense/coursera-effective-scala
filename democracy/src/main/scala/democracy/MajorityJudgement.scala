@@ -132,7 +132,7 @@ case class Election(description: String, candidates: Set[Candidate]):
         // grades assigned to the candidates.
         val bestCandidatesMinusOneMedianGrade: Map[Candidate, Seq[Grade]] = bestCandidates.map(
           kv => (kv._1, kv._2.diff(List(bestMedianGrade)))
-        ).toMap
+        )
 
           // Finally, call `findWinner` on the reduced collection of candidates,
         // `bestCandidatesMinusOneMedianGrade`.
