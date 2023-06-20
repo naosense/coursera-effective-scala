@@ -121,4 +121,5 @@ trait DecoderFallbackInstance:
   given decoderSentinel[A]: Decoder[A] =
     throw AssertionError(s"No given decoder could be found")
 
+  concurrent.blocking()
 end DecoderFallbackInstance
